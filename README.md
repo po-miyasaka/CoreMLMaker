@@ -1,17 +1,25 @@
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Python 3.8.16](https://img.shields.io/badge/python-3.8.16-blue.svg)](https://www.python.org/downloads/release/python-3816/)
+
 
 # CoreMLMaker
 
 CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のためのデータセット作成し、学習済みモデルをmlmodel形式で出力するツールです。
 
-# 環境
+# 動作環境
+
+* Mac x86_64 (Ventura 13.0)
+* Xcode 14.2
+* iPhone11 Pro (iOS 16.3.1)
+* Python 3.8.16
 
 必要なパッケージは`requirements.txt`に記載されています。インストール方法は以下の通りです。
-
 ```
 pip install -r requirements.txt
 ```
+
+
 
 # 使用方法
 
@@ -72,6 +80,11 @@ mlmodelが生成されると、`iOSSample`内のXcodeプロジェクトに`Image
 CoreMLMaker is a tool for creating image recognition datasets from videos (mov or mp4) and outputting the trained model in mlmodel format.
 
 # Environment
+
+* Mac x86_64 (Ventura 13.0)
+* Xcode 14.2
+* iPhone11 Pro (iOS 16.3.1)
+* Python 3.8.16
 
 The required packages are listed in `requirements.txt`. To install them, use the following command:
 
