@@ -3,6 +3,8 @@
 [![Python 3.8.16](https://img.shields.io/badge/python-3.8.16-blue.svg)](https://www.python.org/downloads/release/python-3816/)
 
 
+![sample.gif](sample.gif)
+
 # CoreMLMaker
 
 CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のためのデータセット作成し、学習済みモデルをmlmodel形式で出力するツールです。

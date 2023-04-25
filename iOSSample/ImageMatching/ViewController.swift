@@ -114,6 +114,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func normalizeImage(image: UIImage) -> UIImage? {
+        return image
         guard let cgImage = image.cgImage else { return nil }
         
         let width = cgImage.width

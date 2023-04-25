@@ -3,4 +3,54 @@
    uuid = "E01B27C5-3A22-4703-BA35-9FF293BB3C3D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBB76F8A-9A10-46C7-B0F6-316C047D0F28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageMatching/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "performImageMatching(capturedImage:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FBB76F8A-9A10-46C7-B0F6-316C047D0F28 - aecca475c0b9d638"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImageMatching.ViewController.performImageMatching(capturedImage: __C.UIImage) -&gt; ()"
+                  moduleName = "ImageMatching"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/po_miyasaka/dev/github.com/po-miyasaka/TresureHuntTraining/iOSSample/ImageMatching/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "FBB76F8A-9A10-46C7-B0F6-316C047D0F28 - aecca475c0b9d638"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImageMatching.ViewController.performImageMatching(capturedImage: __C.UIImage) -&gt; ()"
+                  moduleName = "ImageMatching"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/po_miyasaka/dev/github.com/po-miyasaka/TresureHuntTraining/iOSSample/ImageMatching/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
