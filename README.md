@@ -36,7 +36,11 @@ $ python process.py <ソースフォルダ名>
 ```
 ソースフォルダ名には、複数の動画が含まれるフォルダを指定してください。各動画の名前が画像認識時のラベルとして使用されます。つまり、動画の数だけラベルが生成されます。
 
-動画以外にも、複数の動画や画像が格納されたフォルダを入れることで、そのフォルダ名をラベルとして使用できます。例えば、以下のようなディレクトリ構成も有効です。この場合、`Tanuki`と`Kitsune`の2つのラベルが生成されます。
+動画以外にも、複数の動画や画像が格納されたフォルダをソースフォルダ入れることで、そのフォルダ名をラベルとして使用できます。
+再帰的にフォルダを読み込むので、Kaggleなどでダウンロードしたデータセットを気軽にフォルダごと格納することも可能です。
+
+例えば、以下のようなディレクトリ構成も有効です。
+この場合、`Tanuki`と`Kitsune`の2つのラベルが生成されます。
 
 ```shell
 $ tree source_folder
@@ -45,8 +49,11 @@ source_folder
 ├── Kitsune.mov
 └── Tanuki
     ├── ponpoko.mov
-    ├── omohide.mov
-    └── kachikachiyama.jpeg
+    ├── doutanuki.jpg
+    └── Kachikachiyama
+        ├── chagama.jpg
+        ├── konohagakure.jpg
+        └── shigarakiyaki.mov
 ```
 
 ### 入力オプション
@@ -116,8 +123,11 @@ source_folder
 ├── Kitsune.mov
 └── Tanuki
     ├── ponpoko.mov
-    ├── omohide.mov
-    └── kachikachiyama.jpeg
+    ├── omohide.jpg
+    └── kachikachiyama
+        ├── one.jpg
+        ├── two.jpg
+        └── three.mov
 ```
 
 ### Input Options
