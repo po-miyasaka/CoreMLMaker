@@ -30,13 +30,10 @@ $ pip install -r requirements.txt
 
 
 # 使用方法
-
+### 入力
 ```shell
 $ python process.py <ソースフォルダ名>
 ```
-
-### 入力
-
 ソースフォルダ名には、複数の動画が含まれるフォルダを指定してください。各動画の名前が画像認識時のラベルとして使用されます。つまり、動画の数だけラベルが生成されます。
 
 動画以外にも、複数の動画や画像が格納されたフォルダを入れることで、そのフォルダ名をラベルとして使用できます。例えば、以下のようなディレクトリ構成も有効です。この場合、`Tanuki`と`Kitsune`の2つのラベルが生成されます。
@@ -101,12 +98,11 @@ $ pip install -r requirements.txt
 ```
 
 # Usage
+### Input
 
 ```shell
 $ python process.py <source folder name>
 ```
-
-### Input
 
 Specify a folder containing multiple videos as the source folder.  
 The name of each video will be used as the label during image recognition. In other words, the number of labels generated will be equal to the number of videos.
