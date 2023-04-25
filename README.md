@@ -3,6 +3,8 @@
 [![Python 3.8.16](https://img.shields.io/badge/python-3.8.16-blue.svg)](https://www.python.org/downloads/release/python-3816/)
 
 
+![logo](logo.jpg)
+
 ![sample.gif](sample.gif)
 
 # CoreMLMaker
