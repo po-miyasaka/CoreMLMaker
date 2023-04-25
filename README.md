@@ -1,5 +1,5 @@
 
-
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 # CoreMLMaker
 
@@ -60,3 +60,74 @@ python process.py <ソースフォルダ名> -p 20230425100600
 
 mlmodelが生成されると、`iOSSample`内のXcodeプロジェクトに`ImageClassifier.mlmodel`が保存されます。
 そのままアプリをビルドし、簡単に動作確認ができます。
+
+
+
+
+<details>
+  <summary><h1>README with English</h1></summary>
+Below is the translated README.md in English:
+
+
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+
+# CoreMLMaker
+
+CoreMLMaker is a tool for creating image recognition datasets from videos (mov or mp4) and outputting the trained model in mlmodel format.
+
+# Environment
+
+The required packages are listed in `requirements.txt`. To install them, use the following command:
+
+```
+pip install -r requirements.txt
+```
+
+# Usage
+
+```
+python process.py <source folder name>
+```
+
+### Input
+
+Specify a folder containing multiple videos as the source folder.  
+The name of each video will be used as the label during image recognition. In other words, the number of labels generated will be equal to the number of videos.
+
+In addition to videos, you can also use a folder containing multiple videos and images as the label by putting it in the source folder. For example, the following directory structure is also valid. In this case, two labels, `Tanuki` and `Kitsune`, will be generated.
+
+```
+$ tree source_folder
+
+source_folder
+├── Kitsune.mov
+└── Tanuki
+    ├── ponpoko.mov
+    ├── omohide.mov
+    └── kachikachiyama.jpeg
+```
+
+### Input Options
+
+* If you only want to generate images for the dataset:
+
+```
+python process.py <source folder name> -m
+```
+
+* If you have already generated the dataset and only want to perform training and create an mlmodel:
+
+```
+python process.py <source folder name> -p 20230425100600
+```
+`20230425100600` is an example of a folder name automatically created in the `outputs` folder.
+
+## Output
+
+All outputs will be stored in the `outputs` folder. A unique folder name, such as `20230425100600`, will be generated each time the command is executed.
+
+# How to test on an iPhone
+
+Once the mlmodel is generated, the `ImageClassifier.mlmodel` will be saved in the Xcode project within the `iOSSample` folder. You can then build the app and easily test its functionality.
+
+</details>
