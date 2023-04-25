@@ -1,3 +1,4 @@
+import os
 import turicreate as tc
 import argparse
 
@@ -11,6 +12,9 @@ def export_mlmodel(csv_path, mlmodel_path):
     print("Accuracy: ", accuracy)
 
     model.export_coreml(mlmodel_path)
+
+    ios_sample_dir = os.path.join("iOSSample", "ImageMatching", "ImageClassifier.mlmodel")
+    model.export_coreml(ios_sample_dir)
 
 def main():
     parser = argparse.ArgumentParser(description="training")
