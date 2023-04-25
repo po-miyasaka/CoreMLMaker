@@ -5,11 +5,13 @@
 
 ![logo](logo.png)
 
-![sample.gif](sample.gif)
-
 # CoreMLMaker
 
 CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のためのデータセット作成し、学習済みモデルをmlmodel形式で出力するツールです。
+
+<p align="center">
+  <img src="sample.gif" alt="operation image">
+</p>
 
 # 動作環境
 
