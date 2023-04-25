@@ -16,7 +16,7 @@ def augmentation(dir, filename):
         rotation_range=270,
         # width_shift_range=0.5,
         # height_shift_range=0.5,
-        shear_range=0.7,
+        shear_range=np.random.uniform(0, 25),
         # zoom_range=0.7,
         # horizontal_flip=True,
         fill_mode='nearest',
@@ -30,27 +30,35 @@ def augmentation(dir, filename):
     normalized_image = color_fixed_image / 255.0
     x = img_to_array(normalized_image)
     x = np.expand_dims(x, axis=0)
-    
     i = 0
 
     for _ in datagen.flow(x, batch_size=1, save_to_dir=dir, save_prefix=f"{os.path.splitext(filename)[0]}aug", save_format='jpeg'):
         i += 1
-        if i > 3: 
+        if i > 10: 
             break
     os.remove(image_path)
 
-
-def adjust_brightness_contrast(image, brightness_factor, contrast_factor):
-    image = tf.image.adjust_brightness(image, delta=brightness_factor)
-    image = tf.image.adjust_contrast(image, contrast_factor)
-    return image.numpy()
-
 def custom_preprocessing_function(image):
-    brightness_factor = np.random.uniform(-0.5, 0.5)
     contrast_factor = np.random.uniform(0.5, 1.5)
+    brightness_factor = np.random.uniform(-40, 150)
+    
+    """
+    Adjust the exposure of an image using alpha (gain) and beta (bias).
+    :param image: Input image
+    :param alpha: Gain control (contrast)
+    :param beta: Bias control (brightness)
+    :return: Adjusted image
+    """
+    # float32 型から uint8 型に変換
+    image = (image * 255).astype(np.uint8)
 
-    image = adjust_brightness_contrast(image, brightness_factor, contrast_factor)
-    return image
+    # コントラストと明るさを調整
+    adjusted_image = cv2.convertScaleAbs(image, alpha=contrast_factor, beta=brightness_factor)
+
+    # uint8 型から float32 型に変換し、[0, 1] の範囲にスケーリング
+    adjusted_image = adjusted_image.astype(np.float32) / 255
+
+    return adjusted_image
 
 def main():
     parser = argparse.ArgumentParser(description="argumentation")
@@ -58,6 +66,7 @@ def main():
     args = parser.parse_args()
 
     batch_augmentation(args.input)
+
 
 if __name__ == "__main__":
     main()

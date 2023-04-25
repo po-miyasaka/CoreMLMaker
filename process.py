@@ -19,6 +19,7 @@ def process(sources_path, should_make_dataset_only = False, foldername = ""):
         return 
     # making a unique folder that contains all outputs of this process
     process_identifier =  foldername if foldername else datetime.now().strftime("%Y%m%d%H%M%S")
+    makeDir("", "outputs")
     outputs_dir = os.path.join("outputs", process_identifier)
     mp4_dir, images_parent_dir, csv_dir, mlmodel_dir = [ makeDir(outputs_dir, name) for name in ["mp4", "images", "csv", "mlmodel"]]
 
@@ -48,8 +49,7 @@ def make_images(sources_path, images_parent_dir, mp4_dir, images_dir_arg = "", n
         item_path = os.path.join(sources_path, item)
         images_dir = images_dir_arg if images_dir_arg else os.path.join(images_parent_dir, itemName)
         isImage = os.path.splitext(item)[1].lower() in ['.jpg', '.jpeg', '.png', '.gif', '.bmp']
-        if (not nested) and (not os.path.exists(images_dir)) and (not isImage):
-            print(f"Make Folder!!! {images_dir}")
+        if (not nested) and (not isImage):
             os.makedirs(images_dir)
 
         if os.path.isdir(item_path):
