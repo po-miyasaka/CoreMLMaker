@@ -25,8 +25,8 @@ pip install -r requirements.txt
 
 # 使用方法
 
-```
-python process.py <ソースフォルダ名>
+```shell
+$ python process.py <ソースフォルダ名>
 ```
 
 ### 入力
@@ -35,7 +35,7 @@ python process.py <ソースフォルダ名>
 
 動画以外にも、複数の動画や画像が格納されたフォルダを入れることで、そのフォルダ名をラベルとして使用できます。例えば、以下のようなディレクトリ構成も有効です。この場合、`Tanuki`と`Kitsune`の2つのラベルが生成されます。
 
-```
+```shell
 $ tree source_folder
 
 source_folder
@@ -50,13 +50,13 @@ source_folder
 
 * データセットの元となる画像生成のみを行いたい場合：
 
-```
+```shell
 python process.py <ソースフォルダ名> -m
 ```
 
 * データセットを生成済みで、学習とmlmodel作成のみを行いたい場合：
 
-```
+```shell
 python process.py <ソースフォルダ名> -p 20230425100600
 ```
 `20230425100600`は、自動的に`outputs`フォルダ内に作られるフォルダ名の一例です。
@@ -90,14 +90,14 @@ CoreMLMaker is a tool for creating image recognition datasets from videos (mov o
 
 The required packages are listed in `requirements.txt`. To install them, use the following command:
 
-```
-pip install -r requirements.txt
+```shell
+$pip install -r requirements.txt
 ```
 
 # Usage
 
-```
-python process.py <source folder name>
+```shell
+$python process.py <source folder name>
 ```
 
 ### Input
@@ -107,7 +107,7 @@ The name of each video will be used as the label during image recognition. In ot
 
 In addition to videos, you can also use a folder containing multiple videos and images as the label by putting it in the source folder. For example, the following directory structure is also valid. In this case, two labels, `Tanuki` and `Kitsune`, will be generated.
 
-```
+```shell
 $ tree source_folder
 
 source_folder
@@ -122,14 +122,14 @@ source_folder
 
 * If you only want to generate images for the dataset:
 
-```
-python process.py <source folder name> -m
+```shell
+$ python process.py <source folder name> -m
 ```
 
 * If you have already generated the dataset and only want to perform training and create an mlmodel:
 
 ```
-python process.py <source folder name> -p 20230425100600
+$ python process.py <source folder name> -p 20230425100600
 ```
 `20230425100600` is an example of a folder name automatically created in the `outputs` folder.
 
