@@ -11,6 +11,7 @@ CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のた
 
 * Mac x86_64 (Ventura 13.0)
 * Python 3.8.16
+
 必要なパッケージは`requirements.txt`に記載されています。  
 インストール方法は以下の通りです。
 ```
