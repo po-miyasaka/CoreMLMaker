@@ -66,10 +66,6 @@ mlmodelが生成されると、`iOSSample`内のXcodeプロジェクトに`Image
 
 <details>
   <summary><h1>README with English</h1></summary>
-Below is the translated README.md in English:
-
-
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 # CoreMLMaker
 
