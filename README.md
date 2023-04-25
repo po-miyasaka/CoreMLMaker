@@ -91,13 +91,13 @@ CoreMLMaker is a tool for creating image recognition datasets from videos (mov o
 The required packages are listed in `requirements.txt`. To install them, use the following command:
 
 ```shell
-$pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 # Usage
 
 ```shell
-$python process.py <source folder name>
+$ python process.py <source folder name>
 ```
 
 ### Input
