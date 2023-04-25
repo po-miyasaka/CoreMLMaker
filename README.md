@@ -3,7 +3,7 @@
 
 # CoreMLMaker
 
-CoreMLMakerは、動画（movやmp4）から画像認識用のデータセットを作成し、学習したモデルをmlmodel形式で出力するツールです。
+CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のためのデータセット作成し、学習済みモデルをmlmodel形式で出力するツールです。
 
 # 環境
 
