@@ -15,7 +15,7 @@ CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のた
 必要なパッケージは`requirements.txt`に記載されています。  
 インストール方法は以下の通りです。
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 ### 動作確認環境
 * Xcode 14.2
