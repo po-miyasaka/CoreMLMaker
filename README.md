@@ -10,14 +10,15 @@ CoreMLMakerは、任意の動画（movやmp4）や画像から画像認識のた
 # 動作環境
 
 * Mac x86_64 (Ventura 13.0)
-* Xcode 14.2
-* iPhone11 Pro (iOS 16.3.1)
 * Python 3.8.16
-
-必要なパッケージは`requirements.txt`に記載されています。インストール方法は以下の通りです。
+必要なパッケージは`requirements.txt`に記載されています。  
+インストール方法は以下の通りです。
 ```
 pip install -r requirements.txt
 ```
+### 動作確認環境
+* Xcode 14.2
+* iPhone11 Pro (iOS 16.3.1)
 
 
 
