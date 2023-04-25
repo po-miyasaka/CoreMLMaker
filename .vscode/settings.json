@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./internal_source"
+    ],
+    "python.terminal.activateEnvironment": false
+}
