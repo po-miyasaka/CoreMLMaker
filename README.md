@@ -7,7 +7,7 @@
 
 # CoreML Maker
 
-CoreML Makerは、任意の動画（movやmp4）や画像から画像認識のためのデータセット作成し、学習済みモデルをmlmodel形式で出力するツールです。
+CoreML Makerは、任意の動画（mov/mp4）や画像から画像認識のためのデータセット作成し、学習済みモデルをmlmodel形式で出力するツールです。
 
 <p align="center">
   <img src="sample.gif" alt="operation image">
@@ -53,7 +53,7 @@ source_folder
     └── Kachikachiyama
         ├── chagama.jpg
         ├── konohagakure.jpg
-        └── shigarakiyaki.mov
+        └── shigarakiyaki.mp4
 ```
 
 ### 入力オプション
