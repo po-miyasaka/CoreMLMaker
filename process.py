@@ -12,6 +12,7 @@ import argparse
 from datetime import datetime
 import os
 import shutil
+import config
 
 def process(sources_path, should_make_dataset_only = False, foldername = ""):
     if should_make_dataset_only and foldername:
@@ -58,11 +59,11 @@ def make_images(sources_path, images_parent_dir, mp4_dir, images_dir_arg = "", n
             if lowered_extension.endswith('.mov'):
                 video_path = os.path.join(mp4_dir, f"{itemName}.mp4")
                 convert_mov_to_mp4.convert_mov_to_mp4(item_path, video_path)
-                convert_video_to_images.extract_frames(video_path, images_dir)
+                convert_video_to_images.extract_frames(video_path, images_dir, config.skip_frames)
             elif lowered_extension.endswith('.mp4'):
                 video_path = os.path.join(mp4_dir, item)
                 shutil.copy(item_path, video_path)
-                convert_video_to_images.extract_frames(video_path, images_dir)
+                convert_video_to_images.extract_frames(video_path, images_dir, config.skip_frames)
             else:
                 if isImage:
                     shutil.copy2(os.path.join(sources_path, item), images_dir)

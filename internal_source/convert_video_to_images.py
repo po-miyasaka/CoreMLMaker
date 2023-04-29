@@ -1,8 +1,9 @@
 import cv2
 import os
 import argparse
+import config
 
-def extract_frames(video_path, output_dir, skip_frames=15):
+def extract_frames(video_path, output_dir, skip_frames):
     # Create the output directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -51,7 +52,7 @@ def main():
     parser.add_argument("output", help="Path to the images output")
     args = parser.parse_args()
 
-    extract_frames(args.input, args.output)
+    extract_frames(args.input, args.output, config.skip_frames)
 
 if __name__ == "__main__":
     main()
